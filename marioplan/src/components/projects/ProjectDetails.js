@@ -14,8 +14,13 @@ const ProjectDetails = props => {
         <div className="card z-depth-0">
           <div className="card-content">
             <span className="card-title">{project.title}</span>
-            <p>{project.content}</p>s
-          </div>
+            <p>{project.content}</p>
+    <div> { project.hasImage ? <img src={project.imageUrl} alt="Link damaged" style={{
+    width: '100%',
+    height: undefined,
+    aspectRatio: 1,
+}} /> : <p><br></br><i>No Image attached</i></p>}</div>
+          </div> 
           <div className="card-action grey lighten-4 grey-text">
             <div>
               Posted by {project.authorFirstName} {project.authorLastName}

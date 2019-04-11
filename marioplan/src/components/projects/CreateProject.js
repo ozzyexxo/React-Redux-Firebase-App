@@ -6,7 +6,9 @@ import { Redirect } from "react-router-dom";
 class CreateProject extends Component {
   state = {
     title: "",
-    content: ""
+    content: "",
+    hasImage : false,
+    imageUrl : null
   };
   handleChange = e => {
     this.setState({
